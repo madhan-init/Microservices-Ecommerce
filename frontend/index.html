@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservices E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <main>
+            <section class="glass-panel" id="product-section">
+                <h2>Products</h2>
+
+                <form id="product-form" class="dynamic-form">
+                    <h3>Add New Product</h3>
+                    <div class="input-group">
+                        <input type="text" id="prod-name" placeholder="Product Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="prod-price" placeholder="Price ($)" step="0.01" required>
+                    </div>
+                    <button type="submit" class="primary-btn">Create Product</button>
+                </form>
+
+                <div class="product-grid" id="product-list">
+                    <!-- Products will be dynamically loaded here -->
+                    <div class="loading">Loading products...</div>
+                </div>
+            </section>
+
+            <section class="glass-panel" id="order-section">
+                <h2>Orders</h2>
+
+                <form id="order-form" class="dynamic-form">
+                    <h3>Place an Order</h3>
+                    <div class="input-group">
+                        <select id="order-prod-id" required>
+                            <option value="" disabled selected>Select a product...</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="order-qty" placeholder="Quantity" min="1" required>
+                    </div>
+                    <button type="submit" class="primary-btn">Place Order</button>
+                </form>
+
+                <div class="order-list" id="order-list">
+                    <!-- Orders will be dynamically loaded here -->
+                    <div class="loading">Loading orders...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

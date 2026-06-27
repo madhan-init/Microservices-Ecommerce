@@ -1,0 +1,240 @@
+:root {
+    --bg-color: #fff4e6;
+    --panel-border: #000;
+    --text-primary: #000;
+    --accent-color: #ffd000;
+    --accent-hover: #ffea00;
+    --font-family: 'Inter', sans-serif;
+    --border-width: 4px;
+    --shadow: 8px 8px 0px 0px #000;
+    --shadow-active: 0px 0px 0px 0px #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    min-height: 100vh;
+    padding: 2rem;
+    line-height: 1.5;
+    zoom: 0.75;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #a3e635;
+    border: var(--border-width) solid var(--panel-border);
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+header p {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.glass-panel {
+    background: #fff;
+    border: var(--border-width) solid var(--panel-border);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.glass-panel h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+.dynamic-form {
+    margin-bottom: 3rem;
+    background: #e5e7eb;
+    padding: 2rem;
+    border: var(--border-width) solid var(--panel-border);
+}
+
+.dynamic-form h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 1rem;
+    background: #fff;
+    border: var(--border-width) solid var(--panel-border);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background 0.1s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    background: #ffd000;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent-color);
+    color: var(--text-primary);
+    border: var(--border-width) solid var(--panel-border);
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: all 0.1s ease;
+}
+
+.primary-btn:active {
+    transform: translate(8px, 8px);
+    box-shadow: var(--shadow-active);
+}
+
+.primary-btn:hover {
+    background: var(--accent-hover);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: #c084fc;
+    border: var(--border-width) solid var(--panel-border);
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-card:nth-child(even) {
+    background: #38bdf8;
+}
+.product-card:nth-child(3n) {
+    background: #fb7185;
+}
+
+.product-card h4 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.product-card .price {
+    background: #fff;
+    border: var(--border-width) solid #000;
+    display: inline-block;
+    padding: 0.5rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+    align-self: flex-start;
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.order-card {
+    background: #fcd34d;
+    border: var(--border-width) solid var(--panel-border);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-weight: 800;
+}
+
+.order-details strong {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.order-total {
+    background: #fff;
+    border: var(--border-width) solid #000;
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.loading {
+    color: var(--text-primary);
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 3rem;
+    border: var(--border-width) solid var(--panel-border);
+    background: #e5e7eb;
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+}
+
+option {
+    background: #fff;
+    color: #000;
+}
