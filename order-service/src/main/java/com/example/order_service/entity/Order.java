@@ -1,15 +1,7 @@
 package com.example.order_service.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "orders")
 public class Order {
@@ -18,4 +10,37 @@ public class Order {
     private Long id;
     private Long productid;
     private Integer quantity;
+
+    public Order() {
+    }
+
+    public Order(Long id, Long productid, Integer quantity) {
+        this.id = id;
+        this.productid = productid;
+        this.quantity = quantity;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getProductid() {
+        return productid;
+    }
+
+    public void setProductid(Long productid) {
+        this.productid = productid;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
 }
